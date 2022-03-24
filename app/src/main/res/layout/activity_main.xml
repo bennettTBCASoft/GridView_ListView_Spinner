@@ -7,7 +7,6 @@
     tools:context=".MainActivity"
     android:padding="16dp"
     >
-
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="wrap_content"

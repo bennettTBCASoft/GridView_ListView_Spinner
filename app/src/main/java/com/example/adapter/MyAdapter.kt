@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 
 
-class MyAdapter(context: Context, data: ArrayList<Item>, private val layout: Int): ArrayAdapter<Item>(context, layout, data) {
+class MyAdapter(context: Context, private val layout: Int , data: ArrayList<Item>): ArrayAdapter<Item>(context, layout, data) {
 
     // 覆寫 getView
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -25,6 +25,7 @@ class MyAdapter(context: Context, data: ArrayList<Item>, private val layout: Int
             item.name
         else
             "${item.name}: ${item.price}元"
+        // 回傳此項目的畫面
         return view
     }
 }
